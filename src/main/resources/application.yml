@@ -6,13 +6,13 @@ spring:
       routes:
       - id: RAIL-SERVICE
         uri:
-         http://localhost:7071
+          lb://RAIL-SERVICE
         predicates:
         - Path=/rail-service/**
 
       - id: RAIL-EMPLOYEE
         uri:
-          http://localhost:7072
+          lb://RAIL-EMPLOYEE
         predicates:
         - Path=/rail-employee/**
 
